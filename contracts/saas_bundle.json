@@ -1,0 +1,43 @@
+{
+  "id": "C-2026-014",
+  "customer": "Northwind Logistics",
+  "inception": "2026-01-01",
+  "fixed_consideration": "180000.00",
+  "notes": "Three-year SaaS bundle sold at a discount to standalone prices. Implementation judged distinct: a third party could perform it and the platform is functional without it.",
+  "variable": [
+    {
+      "id": "vc1",
+      "description": "Uptime bonus, 99.95% SLA",
+      "estimate": "24000.00",
+      "constrained_to": "9000.00",
+      "basis": "Most likely amount. History shows the bonus earned in 3 of 8 comparable contracts; including the full estimate would risk a significant reversal."
+    }
+  ],
+  "obligations": [
+    {
+      "id": "po-platform",
+      "name": "Platform subscription",
+      "ssp": "150000.00",
+      "method": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "distinct_rationale": "Customer benefits on its own; separately identifiable from implementation."
+    },
+    {
+      "id": "po-implementation",
+      "name": "Implementation services",
+      "ssp": "40000.00",
+      "method": "input_method",
+      "progress": {"2026-01": 0.30, "2026-02": 0.75, "2026-03": 1.00},
+      "distinct_rationale": "Available from third-party vendors; does not significantly modify the platform."
+    },
+    {
+      "id": "po-training",
+      "name": "On-site training, 5 sessions",
+      "ssp": "20000.00",
+      "method": "point_in_time",
+      "satisfaction_date": "2026-02-20",
+      "distinct_rationale": "Optional, separately priced, benefit independent of the subscription."
+    }
+  ]
+}
